@@ -1,0 +1,16 @@
+{
+  "name": "slack-emoji-convertor",
+  "version": "1.0.0",
+  "description": "Convertor of unicode emojis to slack emojis for RPIA",
+  "main": "index.js",
+  "dependencies": {
+    "emoji-datasource": "^4.1.0",
+    "emoji-regex": "^8.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew Peveler <matt.peveler@gmail.com>",
+  "license": "ISC"
+}
