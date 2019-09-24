@@ -1,9 +1,6 @@
 const emoji_regex = require("emoji-regex")();
-const emoji_data = require('emoji-datasource/emoji_pretty.json');
-
-let rpi_replacements = {
-  '🦙': ':llama:'
-};
+//const emoji_data = require('emoji-datasource/emoji_pretty.json');
+const emoji_data = require('./emoji.json');
 
 module.exports = (text) => {
   let replacements = {};
@@ -17,7 +14,7 @@ module.exports = (text) => {
     replacements[match[0]] = emoji_slack ? `:${emoji_slack.short_name}:` : '';
   }
 
-  for (let key in Object.assign(replacements, rpi_replacements)) {
+  for (let key in Object.assign(replacements, {})) {
     const re = new RegExp(key, "g");
     text = text.replace(re, replacements[key]);
   }
